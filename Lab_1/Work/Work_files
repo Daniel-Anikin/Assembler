@@ -41,4 +41,50 @@ Text #3.gz
 [?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Work[00m$ [7mcd ..[27mcd ..
 [?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mmkdir Lab_1[27mmkdir Lab_1
 [?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mmv sandbox Work Work_files Lab_1/[27mmv sandbox Work Work_files Lab_1/
-[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Asse
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mgit add .[27mgit add .
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mgit commit -m 'Лабораторная работа 1'[27mgit commit -m 'Лабораторная работа 1'
+[?2004l[main a720ee8] Лабораторная работа 1
+ 21 files changed, 153 insertions(+)
+ create mode 100644 "Disassemble\r"
+ create mode 100644 "Disassemble\033[27m\r"
+ create mode 100644 "Disassemble\033[27m\033[A\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bgdb"
+ create mode 100644 Lab_1/Work/MyAchiv.tar
+ create mode 100644 Lab_1/Work/Text #3
+ create mode 100644 Lab_1/Work/Text #3.gz
+ create mode 100644 Lab_1/Work/Text @1
+ create mode 100644 Lab_1/Work/Text @1.gz
+ create mode 100644 Lab_1/Work/Work_files
+ create mode 100644 "Lab_1/Work/\320\220\320\275\320\270\320\272\320\270\320\275 \320\224\320\260\320\275\320\270\320\270\320\273 \320\222\320\273\320\260\320\264\320\270\320\274\320\270\321\200\320\276\320\262\320\270\321\207/Result_two"
+ create mode 100644 "Lab_1/Work/\320\220\320\275\320\270\320\272\320\270\320\275 \320\224\320\260\320\275\320\270\320\270\320\273 \320\222\320\273\320\260\320\264\320\270\320\274\320\270\321\200\320\276\320\262\320\270\321\207/Text @1"
+ create mode 100644 "Lab_1/Work/\320\233\320\260\320\261\320\276\321\200\320\260\321\202\320\276\321\200\320\275\320\260\321\217 \321\200\320\260\320\261\320\276\321\202\320\260 \342\204\2261!/Result_3"
+ create mode 100644 "Lab_1/Work/\320\233\320\260\320\261\320\276\321\200\320\260\321\202\320\276\321\200\320\275\320\260\321\217 \321\200\320\260\320\261\320\276\321\202\320\260 \342\204\2261!/Text $2"
+ create mode 100644 Lab_1/Work_files
+ create mode 100755 Lab_1/sandbox/C_version
+ create mode 100644 Lab_1/sandbox/Disassemble
+ create mode 100644 Lab_1/sandbox/first.asm
+ create mode 100644 Lab_1/sandbox/first.o
+ create mode 100644 "Lab_1/sandbox/\320\241_version.c"
+ create mode 100755 a.out
+ create mode 100644 "\320\241_version.c.save"
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mgit push[27mgit push
+[?2004lEnumerating objects: 25, done.
+Counting objects:   4% (1/25)Counting objects:   8% (2/25)Counting objects:  12% (3/25)Counting objects:  16% (4/25)Counting objects:  20% (5/25)Counting objects:  24% (6/25)Counting objects:  28% (7/25)Counting objects:  32% (8/25)Counting objects:  36% (9/25)Counting objects:  40% (10/25)Counting objects:  44% (11/25)Counting objects:  48% (12/25)Counting objects:  52% (13/25)Counting objects:  56% (14/25)Counting objects:  60% (15/25)Counting objects:  64% (16/25)Counting objects:  68% (17/25)Counting objects:  72% (18/25)Counting objects:  76% (19/25)Counting objects:  80% (20/25)Counting objects:  84% (21/25)Counting objects:  88% (22/25)Counting objects:  92% (23/25)Counting objects:  96% (24/25)Counting objects: 100% (25/25)Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects:   4% (1/21)Compressing objects:   9% (2/21)Compressing objects:  14% (3/21)Compressing objects:  19% (4/21)Compressing objects:  23% (5/21)Compressing objects:  28% (6/21)Compressing objects:  33% (7/21)Compressing objects:  38% (8/21)Compressing objects:  42% (9/21)Compressing objects:  47% (10/21)Compressing objects:  52% (11/21)Compressing objects:  57% (12/21)Compressing objects:  61% (13/21)Compressing objects:  66% (14/21)Compressing objects:  71% (15/21)Compressing objects:  76% (16/21)Compressing objects:  80% (17/21)Compressing objects:  85% (18/21)Compressing objects:  90% (19/21)Compressing objects:  95% (20/21)Compressing objects: 100% (21/21)Compressing objects: 100% (21/21), done.
+Writing objects:   4% (1/24)Writing objects:   8% (2/24)Writing objects:  12% (3/24)Writing objects:  16% (4/24)Writing objects:  20% (5/24)Writing objects:  33% (8/24)Writing objects:  37% (9/24)Writing objects:  41% (10/24)Writing objects:  50% (12/24)Writing objects:  54% (13/24)Writing objects:  58% (14/24)Writing objects:  62% (15/24)Writing objects:  66% (16/24)Writing objects:  70% (17/24)Writing objects:  75% (18/24)Writing objects:  79% (19/24)Writing objects:  83% (20/24)Writing objects:  87% (21/24)Writing objects:  91% (22/24)Writing objects:  95% (23/24)Writing objects: 100% (24/24)Writing objects: 100% (24/24), 8.19 KiB | 2.05 MiB/s, done.
+Total 24 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), done.[K
+To github.com:Daniel-Anikin/Assembler.git
+   96aa351..a720ee8  main -> main
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mchmod 200 'Lab_1/Work/Аникин Даниил Владимирович'[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cchmod 200 'Lab_1/Work/Аникин Даниил Владимирович'
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mexit[27mexit
+[?2004lexit
+Script done.
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ script Work_filescd ..[Kscript Work_filesmv first.asm first.o С_version.c C_version Disassemble sandbox/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckdir sandbox[Kgdb -batch -ex "disassemble /r main" ./C_version >> Disassemble[1P_start" ./first.o [C[C[C[C[C[C[C[C[C[C[C[C[C[1@main" ./C_version >[C[C[C[C[C[C[C[C[C[C[C[C[C[2P_start" ./Аникин [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript Work_files[K[6P./C_versionscript Work_filesgdb -batch -ex "disassemble /r _start" ./Аникин > Disassemblemain" ./C_version >> Disassemble[1P_start" ./first.o [C[C[C[C[C[C[C[C[C[C[C[C[C[1@main" ./C_version >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir sandbox[Kv first.asm first.o С_version.c C_version Disassemble sandbox/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript Work_files[Kcd ..[Kscript Work_files[Kgit add /[K.
+[?2004lwarning: could not open directory 'Lab_1/Work/Аникин Даниил Владимирович/': Permission denied
+Lab_1/Work/Аникин Даниил Владимирович/Result_two: Permission denied
+Lab_1/Work/Аникин Даниил Владимирович/Text @1: Permission denied
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mchmod 700 'Аникин Даниил Владимирович'[27mchmod 700 'Аникин Даниил Владимирович'
+[?2004lchmod: cannot access 'Аникин Даниил Владимирович': No such file or directory
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ cd E[KLab_1
+[?2004l[?2004h]0;danielad@
