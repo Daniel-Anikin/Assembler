@@ -1,0 +1,43 @@
+Dump of assembler code for function _start:
+   0x00000033 <+0>:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x00000038 <+5>:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x0000003d <+10>:	b9 00 00 00 00     	mov    $0x0,%ecx
+   0x00000042 <+15>:	ba 0d 00 00 00     	mov    $0xd,%edx
+   0x00000047 <+20>:	cd 80              	int    $0x80
+   0x00000049 <+22>:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x0000004e <+27>:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x00000053 <+32>:	b9 0d 00 00 00     	mov    $0xd,%ecx
+   0x00000058 <+37>:	ba 0d 00 00 00     	mov    $0xd,%edx
+   0x0000005d <+42>:	cd 80              	int    $0x80
+   0x0000005f <+44>:	b8 04 00 00 00     	mov    $0x4,%eax
+   0x00000064 <+49>:	bb 01 00 00 00     	mov    $0x1,%ebx
+   0x00000069 <+54>:	b9 1a 00 00 00     	mov    $0x1a,%ecx
+   0x0000006e <+59>:	ba 19 00 00 00     	mov    $0x19,%edx
+   0x00000073 <+64>:	cd 80              	int    $0x80
+   0x00000075 <+66>:	b8 01 00 00 00     	mov    $0x1,%eax
+   0x0000007a <+71>:	bb 00 00 00 00     	mov    $0x0,%ebx
+   0x0000007f <+76>:	cd 80              	int    $0x80
+End of assembler dump.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function main:
+   0x0000000000001149 <+0>:	f3 0f 1e fa        	endbr64
+   0x000000000000114d <+4>:	55                 	push   %rbp
+   0x000000000000114e <+5>:	48 89 e5           	mov    %rsp,%rbp
+   0x0000000000001151 <+8>:	48 8d 05 ac 0e 00 00	lea    0xeac(%rip),%rax        # 0x2004
+   0x0000000000001158 <+15>:	48 89 c7           	mov    %rax,%rdi
+   0x000000000000115b <+18>:	e8 f0 fe ff ff     	call   0x1050 <puts@plt>
+   0x0000000000001160 <+23>:	48 8d 05 aa 0e 00 00	lea    0xeaa(%rip),%rax        # 0x2011
+   0x0000000000001167 <+30>:	48 89 c7           	mov    %rax,%rdi
+   0x000000000000116a <+33>:	e8 e1 fe ff ff     	call   0x1050 <puts@plt>
+   0x000000000000116f <+38>:	48 8d 05 a8 0e 00 00	lea    0xea8(%rip),%rax        # 0x201e
+   0x0000000000001176 <+45>:	48 89 c7           	mov    %rax,%rdi
+   0x0000000000001179 <+48>:	e8 d2 fe ff ff     	call   0x1050 <puts@plt>
+   0x000000000000117e <+53>:	b8 00 00 00 00     	mov    $0x0,%eax
+   0x0000000000001183 <+58>:	5d                 	pop    %rbp
+   0x0000000000001184 <+59>:	c3                 	ret
+End of assembler dump.
