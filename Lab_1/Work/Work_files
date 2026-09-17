@@ -87,4 +87,24 @@ Lab_1/Work/Аникин Даниил Владимирович/Text @1: Permissio
 [?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ [7mchmod 700 'Аникин Даниил Владимирович'[27mchmod 700 'Аникин Даниил Владимирович'
 [?2004lchmod: cannot access 'Аникин Даниил Владимирович': No such file or directory
 [?2004h]0;danielad@Supremum: ~/Assembler/Assembler[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler[00m$ cd E[KLab_1
-[?2004l[?2004h]0;danielad@
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1[00m$ cd Work
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ cd WorkLab_1hmod 700 'Аникин Даниил Владимирович'
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ git ad d[K[Kd /[K.
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ git add .chmod 700 'Аникин Даниил Владимирович'd Work[KLab_1hmod 700 'Аникин Даниил Владимирович'git add .[Kscript Work_filescd ..[Kscript Work_files[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit[K[K[K[7mgit commit -m 'Лабораторная работа 1'[27mgit commit -m 'Лабораторная работа 1'
+[?2004l[main 79034e3] Лабораторная работа 1
+ 2 files changed, 47 insertions(+), 1 deletion(-)
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ git commit -m 'Лабораторная работа 1'add .[Kchmod 700 'Аникин Даниил Владимирович'd Work[KLab_1hmod 700 'Аникин Даниил Владимирович'git add .[Kscript Work_files[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit push
+[?2004lEnumerating objects: 11, done.
+Counting objects:   9% (1/11)Counting objects:  18% (2/11)Counting objects:  27% (3/11)Counting objects:  36% (4/11)Counting objects:  45% (5/11)Counting objects:  54% (6/11)Counting objects:  63% (7/11)Counting objects:  72% (8/11)Counting objects:  81% (9/11)Counting objects:  90% (10/11)Counting objects: 100% (11/11)Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)Writing objects:  33% (2/6)Writing objects:  50% (3/6)Writing objects:  66% (4/6)Writing objects:  83% (5/6)Writing objects: 100% (6/6)Writing objects: 100% (6/6), 2.86 KiB | 2.86 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 3 local objects.[K
+To github.com:Daniel-Anikin/Assembler.git
+   a720ee8..79034e3  main -> main
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ [7mchmod 200 'Lab_1/Work/Аникин Даниил Владимирович'[27mchmod 200 'Lab_1/Work/Аникин Даниил Владимирович'
+[?2004lchmod: cannot access 'Lab_1/Work/Аникин Даниил Владимирович': No such file or directory
+[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1/Work[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1/Work[00m$ cd //[K[K..
+[?2004l[?2004h]0;danielad@Supremum: ~/Assembler/Assembler/Lab_1[01;32mdanielad@Supremum[00m:[01;34m~/Assembler/Assembler/Lab_1[00m$ cd //[K[K..
+[?2004l
