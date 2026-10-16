@@ -1,0 +1,6 @@
+total 12
+-rw-r--r-- 2 danielad danielad 10 Oct 16 10:44 Task_1
+-rw-r--r-- 2 danielad danielad 10 Oct 16 10:44 Task_1_hard
+-rw-r--r-- 1 danielad danielad 10 Oct 16 10:45 Task_2
+lrwxrwxrwx 1 danielad danielad  6 Oct 16 10:50 Task_2_sym -> Task_2
+-rw-r--r-- 1 danielad danielad  0 Oct 16 10:50 Task_3
