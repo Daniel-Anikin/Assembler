@@ -1,55 +1,55 @@
-format ELF64                  ; формат 64-бит ELF
-public _start                 ; точка входа
+format ELF64
+public _start
 
-section '.text' executable    ; секция кода
+section '.text' executable
 
 _start:
-    mov rax, [rsp]            ; argc
-    cmp rax, 2                ; аргументов >= 2?
-    jl .exit_error            ; нет - ошибка
+    mov rax, [rsp]
+    cmp rax, 2
+    jl .exit_error
 
-    mov rsi, [rsp + 16]       ; argv[1] (наш символ)
-    movzx rbx, byte [rsi]     ; сам символ в rbx
+    mov rsi, [rsp + 16]
+    movzx rbx, byte [rsi]
 
-    call print_number         ; вывести число
+    call print_number
 
-    mov rax, 60               ; sys_exit
-    xor rdi, rdi              ; код 0
+    mov rax, 60
+    xor rdi, rdi
     syscall
 
 .exit_error:
-    mov rax, 60               ; sys_exit
-    mov rdi, 1                ; код 1 (ошибка)
+    mov rax, 60
+    mov rdi, 1
     syscall
 
 print_number:
-    mov rax, rbx              ; число в rax
+    mov rax, rbx
 
-    mov rdi, num_buf_end      ; конец буфера
-    mov byte [rdi], 10        ; '\n' в конец
-    mov r12, 1                ; длина строки = 1
+    mov rdi, num_buf_end
+    mov byte [rdi], 10
+    mov r12, 1
 
 .convert_loop:
-    dec rdi                   ; назад по буферу
-    inc r12                   ; +1 к длине
+    dec rdi
+    inc r12
 
-    xor rdx, rdx              ; очистка rdx
-    mov rcx, 10               ; делитель
-    div rcx                   ; rax/10, остаток в rdx
+    xor rdx, rdx
+    mov rcx, 10
+    div rcx
 
-    add dl, '0'               ; цифра -> ASCII
-    mov [rdi], dl             ; записать в буфер
+    add dl, '0'
+    mov [rdi], dl
 
-    test rax, rax             ; rax == 0?
-    jnz .convert_loop         ; нет - продолжаем
+    test rax, rax
+    jnz .convert_loop
 
-    mov rax, 1                ; sys_write
-    mov rsi, rdi              ; адрес строки
-    mov rdi, 1                ; stdout
-    mov rdx, r12              ; длина
+    mov rax, 1
+    mov rsi, rdi
+    mov rdi, 1
+    mov rdx, r12
     syscall
     ret
 
 section '.bss' writeable
-    num_buf     rb 16         ; буфер под число
+    num_buf     rb 16
     num_buf_end = num_buf + 15
