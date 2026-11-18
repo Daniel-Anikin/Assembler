@@ -12,7 +12,6 @@ section '.bss' writeable
 section '.text' executable
 
 _start:
-
     xor rax, rax
     xor rdi, rdi
     mov rsi, in_buf
@@ -28,7 +27,7 @@ _start:
 
 calc_loop:
     cmp r14, r12
-    jg .print_result
+    jg print_result
 
     mov rax, r14
 
@@ -47,15 +46,15 @@ calc_loop:
     imul rax, rbx
 
     test r14, 1
-    jnz .odd_k
+    jnz odd_k
     add r13, rax
-    jmp .next_iter
+    jmp next_iter
 odd_k:
     sub r13, rax
 
 next_iter:
     inc r14
-    jmp .calc_loop
+    jmp calc_loop
 
 print_result:
     mov rax, r13
@@ -69,56 +68,63 @@ atoi:
     xor r11, r11
     movzx rcx, byte [rsi]
     cmp rcx, '-'
-    jne .parse_loop
+    jne parse_loop
     inc rsi
     mov r11, 1
 parse_loop:
     movzx rcx, byte [rsi]
     test rcx, rcx
-    jz .atoi_done
+    jz atoi_done
     cmp rcx, '0'
-    jb .atoi_done
+    jb atoi_done
     cmp rcx, '9'
-    ja .atoi_done
+    ja atoi_done
     sub rcx, '0'
     imul rax, 10
     add rax, rcx
     inc rsi
-    jmp .parse_loop
+    jmp parse_loop
 atoi_done:
     test r11, r11
-    jz .atoi_ret
+    jz atoi_ret
     neg rax
 atoi_ret:
     ret
 
 print_number:
-    mov rdi, num_buf_end
-    mov byte [rdi], 10
-    mov r12, 1
+    mov rdi, num_buf
+    mov r12, 0
     xor r11, r11
+
     test rax, rax
-    jns .convert_loop
+    jns convert_loop
+
+    mov byte [rdi], '-'
+    inc rdi
+    inc r12
     neg rax
     mov r11, 1
+
 convert_loop:
-    dec rdi
-    inc r12
     xor rdx, rdx
     mov rcx, 10
     div rcx
+
     add dl, '0'
     mov [rdi], dl
-    test rax, rax
-    jnz .convert_loop
-    test r11, r11
-    jz .print_sys
-    dec rdi
+    inc rdi
     inc r12
-    mov byte [rdi], '-'
+
+    test rax, rax
+    jnz convert_loop
+
+add_newline:
+    mov byte [rdi], 10
+    inc r12
+
 print_sys:
     mov rax, 1
-    mov rsi, rdi
+    mov rsi, num_buf
     mov rdi, 1
     mov rdx, r12
     syscall
